@@ -1,0 +1,12 @@
+.cardsContainer {
+    padding-top: 2rem;
+    background-image: url(./../../assets/img/rick-and-morty-campo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
