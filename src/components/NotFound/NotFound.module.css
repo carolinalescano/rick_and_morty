@@ -1,0 +1,7 @@
+.errorContainer {
+    background-image: url(./../../assets/img/error404.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}

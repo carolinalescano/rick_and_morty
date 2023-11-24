@@ -1,13 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Lato&family=Roboto&display=swap");
 .cardContainer{
+    font-family: "Creepster", monospace;
     background-color: rgba(0,0,0,.2);
-    width: 14vw;
-    height: 57vh;
+    width: 12vw;
+    height: 47vh;
     border-radius: .4rem;
     box-shadow: .1rem .1rem 1rem rgba(0,0,0,.6);
     color:white;
     text-shadow: .5rem .5rem 1rem black;
-    letter-spacing: .1vw;
+    letter-spacing: .3vw;
     font-size: .9vw;
+    line-height: 1;
+    
+
 }
 
 .cardContainer img {
@@ -19,4 +24,12 @@
     padding: .4rem;
     display: block;
     margin-left: auto;
+}
+
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+a:visited {
+    color: inherit;
 }

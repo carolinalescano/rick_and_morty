@@ -1,5 +1,10 @@
-.searchBarContainer{
-    background-color: red;
-    
-    
+.navContainer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(143,73,125);
+    padding-right: 10rem;
+}
+
+.navContainer button {
+    margin-left: 1rem;
 }
