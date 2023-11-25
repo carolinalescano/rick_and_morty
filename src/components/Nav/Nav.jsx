@@ -20,6 +20,9 @@ const Nav = (props) => {
       <NavLink to={"/home"}>
         <span>Home</span>
       </NavLink>
+      <NavLink to={"/favorites"}>
+        <span>Favorites</span>
+      </NavLink>
       <button onClick={props.logout}>Logout</button>
     </div>
   );

@@ -1,5 +1,5 @@
 .formContainer {
-    background-color: greenyellow;
+    background-color: grey;
     width: 100vw;
     height: 100vh;
      padding: 6rem ;
@@ -7,7 +7,7 @@
 
 .form {
 
-    background-color: orangered;
+    background-color: grey;
     border: 0.1rem solid black;
     width: 30%;
     margin: 6rem auto;

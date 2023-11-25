@@ -8,6 +8,7 @@ import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import NotFound from "./components/NotFound/NotFound";
 import Form from "./components/Form/Form";
+import Favorites from "./components/favorites/favorites";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -79,6 +80,10 @@ function App() {
         ></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/detail/:id" element={<Detail></Detail>}></Route>
+        <Route
+          path="/favorites"
+          element={<Favorites onClose={onClose} />}
+        ></Route>
         <Route path="*" element={<NotFound />}></Route>
         <Route path="/" element={<Form login={login}></Form>}></Route>
       </Routes>
