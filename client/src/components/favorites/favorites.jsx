@@ -14,7 +14,7 @@ export default function Favorites(props) {
           status={myFavorite.status}
           species={myFavorite.species}
           gender={myFavorite.gender}
-          origin={myFavorite.origin.name}
+          origin={myFavorite.origin?.name}
           image={myFavorite.image}
           onClose={onClose}
         ></Card>

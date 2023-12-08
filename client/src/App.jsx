@@ -15,19 +15,20 @@ function App() {
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const EMAIL = "careules@gmail.com";
-  const PASSWORD = "Password2023";
 
   useEffect(() => {
     !access && navigate("/");
   }, [access]);
 
-  const login = (userData) => {
-    if (userData.password === PASSWORD && userData.email === EMAIL) {
-      setAccess(true);
-      navigate("/home");
-    }
-  };
+  function login(userData) {
+    const { email, password } = userData;
+    const URL = "http://localhost:3001/rickandmorty/login/";
+    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+      const { access } = data;
+      setAccess(data);
+      access && navigate("/home");
+    });
+  }
 
   function onSearch(id) {
     const repeatedCharacter = characters.find(

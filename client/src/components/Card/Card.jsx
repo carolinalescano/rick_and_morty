@@ -36,13 +36,13 @@ export default function Card(props) {
             props.onClose(id);
           }}
         >
-          {isFav ? (
-            <button onClick={handleFavorite}>❤️</button>
-          ) : (
-            <button onClick={handleFavorite}>🤍</button>
-          )}
           X
         </button>
+        {isFav ? (
+          <button onClick={handleFavorite}>❤️</button>
+        ) : (
+          <button onClick={handleFavorite}>🤍</button>
+        )}
       </div>
       <Link to={`/detail/${id}`}>
         <img src={image} alt="" />
@@ -50,7 +50,7 @@ export default function Card(props) {
         <h3>{status}</h3>
         <h3>{species}</h3>
         <h3>{gender}</h3>
-        <h3>{origin.name}</h3>
+        <h3>{origin?.name}</h3>
       </Link>
     </div>
   );
