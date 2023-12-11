@@ -8,3 +8,19 @@
 .navContainer button {
     margin-left: 1rem;
 }
+
+.navContainer ul {
+    display: flex;
+}
+
+.navContainer ul li {
+    background-color: rgb(25,25,59);
+    color: white;
+    list-style: none;
+}
+
+.navContainer button {
+    background-color: rgb(25,25,59);
+    color: white
+
+}

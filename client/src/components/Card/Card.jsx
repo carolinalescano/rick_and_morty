@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addFav, removeFav } from "../../redux/actions";
 
 export default function Card(props) {
-  const { id, name, image, status, species, gender, origin } = props;
+  const { id, name, image, status, species, gender, origin, isFavoriteView } =
+    props;
   const dispatch = useDispatch();
   const [isFav, setIsFav] = useState(false);
 
@@ -31,13 +32,16 @@ export default function Card(props) {
   return (
     <div className={style.cardContainer}>
       <div>
-        <button
-          onClick={() => {
-            props.onClose(id);
-          }}
-        >
-          X
-        </button>
+        {!isFavoriteView && (
+          <button
+            onClick={() => {
+              props.onClose(id);
+            }}
+          >
+            X
+          </button>
+        )}
+
         {isFav ? (
           <button onClick={handleFavorite}>❤️</button>
         ) : (

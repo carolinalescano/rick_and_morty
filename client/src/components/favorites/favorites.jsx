@@ -3,7 +3,6 @@ import Card from "../Card/Card";
 import style from "./../Cards/Cards.module.css";
 
 export default function Favorites(props) {
-  const { onClose } = props;
   const myFavorites = useSelector((state) => state.myFavorites);
   const showFavorites = myFavorites.map((myFavorite, index) => {
     return (
@@ -16,7 +15,7 @@ export default function Favorites(props) {
           gender={myFavorite.gender}
           origin={myFavorite.origin?.name}
           image={myFavorite.image}
-          onClose={onClose}
+          isFavoriteView={true}
         ></Card>
       </div>
     );

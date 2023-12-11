@@ -9,21 +9,38 @@ const Nav = (props) => {
   };
   return (
     <div className={styles.navContainer}>
-      <SearchBar
-        characters={props.characters}
-        onSearch={props.onSearch}
-      ></SearchBar>
-      <button onClick={addRandom}>Add Random</button>
-      <NavLink to={"/about"}>
-        <span>About</span>
-      </NavLink>
-      <NavLink to={"/home"}>
-        <span>Home</span>
-      </NavLink>
-      <NavLink to={"/favorites"}>
-        <span>Favorites</span>
-      </NavLink>
-      <button onClick={props.logout}>Logout</button>
+      <ul>
+        <li>
+          <SearchBar
+            characters={props.characters}
+            onSearch={props.onSearch}
+          ></SearchBar>
+        </li>
+        <li>
+          <button onClick={addRandom}>Add Random</button>
+        </li>
+        <div>
+          <li>
+            <NavLink to={"/about"}>
+              <span>About</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={"/home"}>
+              <span>Home</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={"/favorites"}>
+              <span>Favorites</span>
+            </NavLink>
+          </li>
+        </div>
+
+        <li>
+          <button onClick={props.logout}>Logout</button>
+        </li>
+      </ul>
     </div>
   );
 };
