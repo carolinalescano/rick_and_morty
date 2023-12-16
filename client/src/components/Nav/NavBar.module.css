@@ -1,26 +1,31 @@
 .navContainer {
     display: flex;
-    justify-content: flex-end;
-    background-color: rgb(143,73,125);
-    padding-right: 10rem;
+    justify-content: space-between;
+    background-color: rgba(143, 73, 125);
+    width: 100vw;
 }
-
+.btnsContainer {
+    display: flex;
+    width: 100%;
+}
 .navContainer button {
     margin-left: 1rem;
 }
-
 .navContainer ul {
     display: flex;
 }
-
 .navContainer ul li {
-    background-color: rgb(25,25,59);
+    /* background-color: rgb(25, 25, 59); */
     color: white;
     list-style: none;
 }
-
 .navContainer button {
-    background-color: rgb(25,25,59);
-    color: white
-
+    background-color: rgb(25, 25, 59);
+    color: white;
+}
+.navContainer .navsButtons {
+    margin-right: auto;
+}
+.navsButtons li {
+    margin-left: 5rem;
 }

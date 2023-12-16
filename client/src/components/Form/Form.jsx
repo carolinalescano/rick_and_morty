@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Form.module.css";
 import validate from "./validation.js";
-import image from "./../../assets/img/rick&mortyPurple.gif";
+import image from "./../../assets/img/gifverde.webp";
 
 const Form = (props) => {
   const initialState = { email: "", password: "" };
@@ -27,26 +27,29 @@ const Form = (props) => {
   return (
     <div className={styles.formContainer}>
       <form className={styles.form}>
+        <h1>The Rick and Morty's World</h1>
         <img src={image}></img>
-        <label>Email</label>
-        <input
-          onChange={handleChange}
-          type="text"
-          placeholder=""
-          value={userData.email}
-          name="email"
-        />
-        {errors.email ? <p>{errors.email}</p> : null}
-        <label>Password</label>
-        <input
-          onChange={handleChange}
-          type="text"
-          value={userData.password}
-          name="password"
-        />
-        {errors.password ? <p>{errors.password}</p> : null}
+        <div className={styles.divButtons}>
+          <label>Email</label>
+          <input
+            onChange={handleChange}
+            type="text"
+            placeholder=""
+            value={userData.email}
+            name="email"
+          />
+          {errors.email ? <p>{errors.email}</p> : null}
+          <label>Password</label>
+          <input
+            onChange={handleChange}
+            type="password"
+            value={userData.password}
+            name="password"
+          />
+          {errors.password ? <p>{errors.password}</p> : null}
 
-        <button onClick={handleSubmit}>Submit</button>
+          <button onClick={handleSubmit}>Submit</button>
+        </div>
       </form>
     </div>
   );

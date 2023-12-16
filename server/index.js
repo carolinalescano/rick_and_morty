@@ -2,9 +2,11 @@ const express = require("express");
 const server = express();
 const PORT = 3001;
 const router = require("./src/routes/index");
+const { conn } = require("./src/DB_connection");
 
 server.listen(PORT, () => {
   console.log("Server raise in port: " + PORT);
+  conn.sync({ force: true });
 });
 
 server.use((req, res, next) => {
