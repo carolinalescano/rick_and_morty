@@ -1,4 +1,4 @@
-import { ADD_FAV, REMOVE_FAV } from "./action-types";
+import { ADD_FAV, FILTER, ORDER, REMOVE_FAV } from "./action-types";
 
 import axios from "axios";
 
@@ -34,4 +34,16 @@ const removeFav = (id) => {
   };
 };
 
-export { removeFav, addFav };
+const filterCards = (gender) => {
+  return {
+    type: FILTER,
+    payload: gender,
+  };
+};
+
+const orderCards = (selectOrder) => {
+  type: ORDER;
+  payload: selectOrder;
+};
+
+export { removeFav, addFav, orderCards, filterCards };

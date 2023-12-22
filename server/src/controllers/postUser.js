@@ -1,19 +1,22 @@
 const { User } = require("./../DB_connection");
 
 const postUser = async (req, res) => {
-  const { email, password } = req.body;
+  const { name, email, password, birthdate, sex } = req.body;
 
   try {
-    if (!email || !password) {
+    if (!name || !email || !password || !birthdate || !sex) {
       return res.status(400).send("Faltan datos");
     }
+    const existingUser = await User.findOne({ where: { email } });
+    if (existingUser) return res.status(400).send("El usuario ya existe");
 
-    const id = 0;
     const user = await User.findOrCreate({
       where: {
-        id: id + 1,
+        name,
         email,
         password,
+        birthdate,
+        sex,
       },
     });
 

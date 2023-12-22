@@ -9,6 +9,7 @@ import Detail from "./components/Detail/Detail";
 import NotFound from "./components/NotFound/NotFound";
 import Form from "./components/Form/Form";
 import Favorites from "./components/Favorites/Favorites";
+import SignUp from "./components/SingUp/SingUp";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -65,20 +66,19 @@ function App() {
 
   return (
     <div className="App">
-      {location.pathname !== "/" ? (
+      {/* {location.pathname !== "/" ? (
         <Nav onSearch={onSearch} characters={characters} logout={logout}></Nav>
-      ) : null}
+      ) : null} */}
+
+      <Nav onSearch={onSearch} characters={characters} logout={logout}></Nav>
 
       <Routes>
-        {/* <Route
-          exact
-          path="/"
-          element={<Cards characters={characters} onClose={onClose}></Cards>}
-        ></Route> */}
+        <Route exact path="/" element={<Form login={login}></Form>}></Route>
         <Route
           path="/home"
           element={<Cards characters={characters} onClose={onClose}></Cards>}
         ></Route>
+        <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/detail/:id" element={<Detail></Detail>}></Route>
         <Route
@@ -86,7 +86,6 @@ function App() {
           element={<Favorites onClose={onClose} />}
         ></Route>
         <Route path="*" element={<NotFound />}></Route>
-        <Route path="/" element={<Form login={login}></Form>}></Route>
       </Routes>
     </div>
   );
