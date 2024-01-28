@@ -15,16 +15,7 @@ const Nav = (props) => {
       {currentPath !== "/" && currentPath !== "/signup" ? (
         <div className={styles.navContainer}>
           <ul>
-            <li>
-              <SearchBar
-                characters={props.characters}
-                onSearch={props.onSearch}
-              ></SearchBar>
-            </li>
-            <li>
-              <button onClick={addRandom}>Add Random</button>
-            </li>
-            <div>
+            <div className={styles.navButtons}>
               <li>
                 <NavLink to={"/about"}>
                   <span>About</span>
@@ -35,12 +26,22 @@ const Nav = (props) => {
                   <span>Home</span>
                 </NavLink>
               </li>
+
               <li>
                 <NavLink to={"/favorites"}>
                   <span>Favorites</span>
                 </NavLink>
               </li>
             </div>
+            <li>
+              <SearchBar
+                characters={props.characters}
+                onSearch={props.onSearch}
+              ></SearchBar>
+            </li>
+            <li>
+              <button onClick={addRandom}>Add Random</button>
+            </li>
 
             <li>
               <button onClick={props.logout}>Logout</button>

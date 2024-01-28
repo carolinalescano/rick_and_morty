@@ -21,9 +21,9 @@ const SignUp = () => {
     });
     setErrors(validate({ ...inputs, [event.target.name]: event.target.value }));
   };
-  const signUp = (userData) => {
+  const signUp = (useData) => {
     const URL = "http://localhost:3001/rickandmorty/signup/";
-    axios.post(URL, userData);
+    axios.post(URL, user);
   };
 
   const handleSubmit = () => {

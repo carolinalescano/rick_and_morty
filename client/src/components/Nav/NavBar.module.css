@@ -1,8 +1,18 @@
 .navContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: rgba(143, 73, 125);
     width: 100vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navContainer button {
+    background-color: inherit;
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+
 }
 .btnsContainer {
     display: flex;
@@ -19,13 +29,21 @@
     color: white;
     list-style: none;
 }
-.navContainer button {
-    background-color: rgb(25, 25, 59);
-    color: white;
-}
-.navContainer .navsButtons {
+
+.navContainer .navButtons {
+    display: flex;
+    justify-content: space-evenly;
     margin-right: auto;
+   
 }
-.navsButtons li {
-    margin-left: 5rem;
+
+.navButtons li {
+    margin-left: 1rem;
+   
+
+}
+
+.navButtons li a {
+    font-family: inherit;
+    font-weight: bold;
 }

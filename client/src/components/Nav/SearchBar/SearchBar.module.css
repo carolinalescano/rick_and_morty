@@ -3,6 +3,7 @@
 }
 
 .searchBarContainer button {
-    background-color: rgb(25,25,59);
-    color: white
+    background-color: inherit;
+    color: white;
+    border: none;
 }
